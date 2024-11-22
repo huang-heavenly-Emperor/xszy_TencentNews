@@ -95,26 +95,26 @@ document.addEventListener('DOMContentLoaded', function() {
             caption: '习近平同巴西总统卢拉举行会谈'
         },
         {
-            image: 'assets/images/lunbo_2.png',
+            image: '/assets/images/lunbo_2.png',
             caption: '习近平同巴西总统卢拉'
         },
         {
-            image: 'assets/images/lunbo_3.png',
+            image: '/assets/images/lunbo_3.png',
             caption: '中华人民共和国和巴西联邦共和国关于携手构建更公正世界和更可持续星球的中巴命运共同体的联合声明'
         }
     ];
     const slides_2 = [
         {
-            image: 'assets/images/lunbo_5.webp',
+            image: '/assets/images/lunbo_5.webp',
             caption: ` Moments in Motion | President Xi at G20
     Rio Summit`
         },
         {
-            image: 'assets/images/lunbo_6.png',
+            image: '/assets/images/lunbo_6.png',
             caption: `两国元首深入交换意见，达成广泛共识，取得丰硕成果。`
         }   ,   
         {
-            image: 'assets/images/lunbo_7.webp',
+            image: '/assets/images/lunbo_7.webp',
             caption: `此次访问最重要的成果之一，是两国元首宣布，将中巴关系定位提升为携手构建更公正世界和更可持续星球的中巴命运共同体。`
         }   
     ];

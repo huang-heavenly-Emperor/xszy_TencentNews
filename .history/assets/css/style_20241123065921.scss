@@ -162,7 +162,7 @@ header {
                             border-left: 3px #c3c2c1 solid;
                             content: "";
                             text-align: left;
-                            background: url(../images/search.png) right center no-repeat;
+                            background: url('../images/search.png') right center no-repeat;
                             background-size: 30px;
                             margin-right: 5px;
 
@@ -746,7 +746,7 @@ header {
         overflow: hidden;
         align-items: center;
         min-width: 1200px;
-        background: url(../images/lunbo_7.webp) no-repeat center center;
+        background: url('/assets/images/lunbo_7.webp') no-repeat center center;
         background-size: cover;
 
         .news-title {
