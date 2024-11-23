@@ -856,25 +856,21 @@ header .bottom-nav .nav-link.more::after {
   border-radius: 15px;
 }
 
-/* 新闻项悬停效果 */
 .main .news-section_3.container .news-main .news-list .news-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   transition: all .3s ease;
 }
 
-/* 新闻项图片悬停效果 */
 .main .news-section_3.container .news-main .news-list .news-item:hover img {
   transform: scale(1.05);
   transition: transform .3s ease;
 }
 
-/* 更多按钮悬停效果 */
 .main .news-section_3.container .news-main .news-list .news-item:hover .more {
   background-color: #aa220d;
 }
 
-/* 滑入动画 */
 @keyframes slideIn {
   0% {
     transform: translateX(-50%);
@@ -884,7 +880,6 @@ header .bottom-nav .nav-link.more::after {
   }
 }
 
-/* 页脚样式 */
 .footer {
   padding: 40px 0;
   background-color: #fff;
@@ -892,7 +887,6 @@ header .bottom-nav .nav-link.more::after {
   text-align: center;
 }
 
-/* 页脚链接区域样式 */
 .footer .footer-links {
   width: 100%;
   height: max-content;
@@ -903,7 +897,6 @@ header .bottom-nav .nav-link.more::after {
   margin-bottom: 20px;
 }
 
-/* 页脚链接列样式 */
 .footer .footer-links .links-col a {
   display: block;
   margin: 5px 0;

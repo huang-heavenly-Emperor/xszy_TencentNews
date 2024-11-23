@@ -32,14 +32,14 @@ class ImageSlider {
 
             // 创建指示点
             const dot = document.createElement('span');
-            dot.className = `dot ${index === 0 ? 'active' : ''}`; // 第一个指示点默认激活
-            dot.addEventListener('click', () => this.goToSlide(index)); // 点击指示点切换幻灯片
+            dot.className = `dot ${index === 0 ? 'active' : ''}`;
+            dot.addEventListener('click', () => this.goToSlide(index));
             this.dotsContainer.appendChild(dot);
         });
 
         // 添加按钮事件监听
-        this.prevBtn.addEventListener('click', () => this.prevSlide()); // 上一张按钮点击事件
-        this.nextBtn.addEventListener('click', () => this.nextSlide()); // 下一张按钮点击事件
+        this.prevBtn.addEventListener('click', () => this.prevSlide());
+        this.nextBtn.addEventListener('click', () => this.nextSlide());
 
         // 开始自动播放
         this.startAutoPlay();
@@ -74,7 +74,7 @@ class ImageSlider {
 
     // 开始自动播放
     startAutoPlay() {
-        this.interval = setInterval(() => this.nextSlide(), 5000); // 每5秒自动切换一次
+        this.interval = setInterval(() => this.nextSlide(), 5000);
     }
 
     // 停止自动播放
@@ -88,7 +88,7 @@ class ImageSlider {
 
 // 页面加载完成后初始化轮播图
 document.addEventListener('DOMContentLoaded', function () {
-    // 示例轮播图数据配置
+    // 轮播图数据配置
     const slides = [
         {
             image: 'https://via.placeholder.com/400x300/ff6b6b/ffffff',
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     ];
 
-    // 第一组轮播图数据 - 政治新闻
+    // 第一组轮播图数据
     const slides_1 = [
         {
             image: 'assets/images/lunbo_1.png',
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     ];
 
-    // 第二组轮播图数据 - 国际新闻
+    // 第二组轮播图数据
     const slides_2 = [
         {
             image: 'assets/images/lunbo_5.webp',

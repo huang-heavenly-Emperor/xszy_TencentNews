@@ -1,0 +1,385 @@
+// 基础变量定义
+$primary-color: #3374e6;
+$text-color: #333;
+$light-text: #666;
+$border-color: #e6e6e6;
+$white: #fff;
+$container-width: 2560px;
+$red: #d92b11;
+
+// 响应式断点变量
+$breakpoints: (
+    'small': 768px,
+    'medium': 1024px,
+    'large': 1200px,
+    'xlarge': 1440px
+);
+
+// 通用混合器 - 居中布局
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// 容器混合器 - 统一容器样式
+@mixin container {
+    width: 100%;
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+// 响应式混合器 - 媒体查询
+@mixin respond-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}
+
+// 基础样式重置
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    all: unset;
+}
+
+// 页面基础布局
+body {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    min-width: 320px;
+
+    @include respond-to('medium') {
+        min-width: 768px;
+    }
+}
+
+header,
+main,
+footer {
+    min-width: 320px;
+
+    @include respond-to('medium') {
+        min-width: 768px;
+    }
+}
+
+// 头部导航样式
+header {
+    .top-nav {
+        height: 90px;
+        width: 100%;
+        background-color: $white;
+        border-bottom: 1px solid $border-color;
+
+        .container {
+            @include container;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+
+            // 左侧区域
+            .left {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                min-width: 200px;
+
+                .city {
+                    color: $text-color;
+                    font-size: 20px;
+
+                    .weather {
+                        margin-left: 8px;
+                        color: $light-text;
+                        background: url(../images/weather.png) no-repeat left center;
+                        background-size: 20px;
+                        padding-left: 25px;
+                    }
+                }
+
+                .logo {
+                    height: 50px;
+                }
+            }
+
+            // 中间搜索区域
+            .center {
+                flex: 1.5;
+                max-width: 600px;
+                margin: 0 40px;
+                height: 44px;
+
+                .search-box {
+                    border: none;
+                    position: relative;
+
+                    .search-input {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 22px;
+                        background: hsla(0, 0%, 94%, .6);
+                        border: 1px solid #ede9e4;
+                        border-radius: 18px;
+                        box-sizing: border-box;
+                        color: #5c5c5c;
+                        font-size: 16px;
+                        height: 44px;
+                        outline: none;
+                        padding: 0 80px 0 20px;
+                        transition: width .3s linear;
+                        width: 100%;
+                    }
+
+                    .search-btn {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        height: 100%;
+                        border: none;
+                        background: none;
+                        font-size: 18px;
+                        line-height: 44px;
+                        padding-right: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        cursor: pointer;
+
+                        &::before {
+                            all: unset;
+                            display: block;
+                            width: 40px;
+                            height: 25px;
+                            border-left: 3px #c3c2c1 solid;
+                            content: "";
+                            text-align: left;
+                            background: url(../images/search.png) right center no-repeat;
+                            background-size: 30px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+
+            // 右侧区域
+            .right {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                // 导航菜单
+                .nav-menu {
+                    display: flex;
+                    gap: 30px;
+                    list-style: none;
+
+                    .nav-item {
+                        font-size: 16px;
+                        color: $text-color;
+                        cursor: pointer;
+                        transition: color 0.3s;
+
+                        &:hover {
+                            color: $primary-color;
+                        }
+
+                        // 活动状态
+                        &.active {
+                            color: $primary-color;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                // 用户操作区
+                .user-actions {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+
+                    .login-btn {
+                        padding: 8px 20px;
+                        border: 1px solid $primary-color;
+                        border-radius: 20px;
+                        color: $primary-color;
+                        font-size: 14px;
+                        cursor: pointer;
+                        transition: all 0.3s;
+
+                        &:hover {
+                            background-color: $primary-color;
+                            color: $white;
+                        }
+                    }
+
+                    .user-avatar {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        cursor: pointer;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 二级导航
+    .sub-nav {
+        height: 50px;
+        background-color: $white;
+        border-bottom: 1px solid $border-color;
+
+        .container {
+            @include container;
+            height: 100%;
+
+            .sub-menu {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                gap: 25px;
+
+                .sub-item {
+                    font-size: 14px;
+                    color: $light-text;
+                    cursor: pointer;
+                    transition: color 0.3s;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+
+                    &.active {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 响应式适配
+@media screen and (max-width: map-get($breakpoints, 'large')) {
+    header {
+        .top-nav {
+            .container {
+                .center {
+                    max-width: 400px;
+                    margin: 0 20px;
+                }
+
+                .right {
+                    .nav-menu {
+                        gap: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, 'medium')) {
+    header {
+        .top-nav {
+            .container {
+                .left {
+                    min-width: auto;
+                    
+                    .city {
+                        display: none;
+                    }
+                }
+
+                .center {
+                    display: none;
+                }
+
+                .right {
+                    .nav-menu {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .sub-nav {
+            overflow-x: auto;
+            
+            .container {
+                padding: 0 20px;
+                
+                .sub-menu {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
+// 移动端菜单按钮
+.mobile-menu-btn {
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+
+    @media screen and (max-width: map-get($breakpoints, 'medium')) {
+        display: block;
+    }
+
+    span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $text-color;
+        position: absolute;
+        transition: all 0.3s;
+
+        &:nth-child(1) {
+            top: 6px;
+        }
+
+        &:nth-child(2) {
+            top: 14px;
+        }
+
+        &:nth-child(3) {
+            top: 22px;
+        }
+    }
+
+    &.active {
+        span {
+            &:nth-child(1) {
+                transform: rotate(45deg);
+                top: 14px;
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+                top: 14px;
+            }
+        }
+    }
+}

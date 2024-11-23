@@ -587,7 +587,6 @@ header .bottom-nav .nav-link.more::after {
   z-index: 999;
 }
 
-/* 语言选项悬停效果 */
 .main .news-section_2.container .language-nav .language-item:hover {
   color: #3374e6;
 }
@@ -596,7 +595,6 @@ header .bottom-nav .nav-link.more::after {
   width: 100%;
 }
 
-/* 活动语言选项样式 */
 .main .news-section_2.container .language-nav .active {
   color: #3374e6;
 }
@@ -605,7 +603,6 @@ header .bottom-nav .nav-link.more::after {
   width: 100%;
 }
 
-/* 第二新闻区块主体布局 */
 .main .news-section_2.container .news-main {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr;
@@ -613,7 +610,6 @@ header .bottom-nav .nav-link.more::after {
   grid-template-rows: 1fr 1fr 1fr;
 }
 
-/* 第二新闻区块轮播区域布局 */
 .main .news-section_2.container .news-main .section_2_slider {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -626,7 +622,6 @@ header .bottom-nav .nav-link.more::after {
   height: 100%;
 }
 
-/* 习近平时间区域样式 */
 .main .news-section_2.container .news-main .xi-time {
   grid-column-start: 3;
   grid-column-end: 4;
@@ -635,7 +630,6 @@ header .bottom-nav .nav-link.more::after {
   overflow: hidden;
 }
 
-/* 习近平时间图片区域样式 */
 .main .news-section_2.container .news-main .xi-time .time-img {
   width: 100%;
   height: 300px;
@@ -654,7 +648,6 @@ header .bottom-nav .nav-link.more::after {
   height: 100%;
 }
 
-/* 习近平时间标题样式 */
 .main .news-section_2.container .news-main .xi-time .time-img::before {
   content: 'Xi\'s Time';
   display: block;
@@ -667,7 +660,6 @@ header .bottom-nav .nav-link.more::after {
   z-index: 5;
 }
 
-/* 习近平时间内容区域样式 */
 .main .news-section_2.container .news-main .xi-time .content {
   display: flex;
   flex-direction: column;
@@ -679,12 +671,10 @@ header .bottom-nav .nav-link.more::after {
   line-height: 40px;
 }
 
-/* 新闻内容区域样式 */
 .main .news-section_2.container .news-main .news-content {
   width: 100%;
 }
 
-/* 信息列表样式 */
 .main .news-section_2.container .news-main .info-list {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -696,19 +686,16 @@ header .bottom-nav .nav-link.more::after {
   width: 100%;
 }
 
-/* 信息项样式 */
 .main .news-section_2.container .news-main .info-list .info-item {
   height: 100%;
 }
 
-/* 信息项视频样式 */
 .main .news-section_2.container .news-main .info-list .info-item video {
   all: unset;
   width: 100%;
   height: 80%;
 }
 
-/* 信息项文本样式 */
 .main .news-section_2.container .news-main .info-list .info-item .info {
   height: 20%;
   width: 100%;
@@ -723,7 +710,6 @@ header .bottom-nav .nav-link.more::after {
   font-weight: 600;
 }
 
-/* 第三新闻区块样式 */
 .main .news-section_3.container {
   height: 1000px;
   width: 100%;
@@ -740,14 +726,12 @@ header .bottom-nav .nav-link.more::after {
   background-size: cover;
 }
 
-/* 第三新闻区块标题样式 */
 .main .news-section_3.container .news-title {
   color: #d92b11;
   margin-top: 0;
   text-shadow: 0 0 3px #595554;
 }
 
-/* 新闻信息样式 */
 .main .news-section_3.container .new_info {
   color: #d92b11;
   font-size: 0;
@@ -755,7 +739,6 @@ header .bottom-nav .nav-link.more::after {
   line-height: 30px;
 }
 
-/* 新闻信息文本样式 */
 .main .news-section_3.container .new_info span {
   display: block;
   all: unset;
@@ -766,7 +749,6 @@ header .bottom-nav .nav-link.more::after {
   cursor: default;
 }
 
-/* 新闻信息特殊样式 */
 .main .news-section_3.container .new_info span:nth-child(2) {
   color: #fff;
   background-color: #d92b11;
@@ -777,7 +759,6 @@ header .bottom-nav .nav-link.more::after {
   border: 3px #d92b11 solid;
 }
 
-/* 第三新闻区块主体样式 */
 .main .news-section_3.container .news-main {
   margin-top: 80px;
   width: 100%;
@@ -790,7 +771,6 @@ header .bottom-nav .nav-link.more::after {
   border-radius: 10px;
 }
 
-/* 更多新闻按钮样式 */
 .main .news-section_3.container .news-main .more-news {
   all: unset;
   align-self: flex-end;
@@ -802,12 +782,10 @@ header .bottom-nav .nav-link.more::after {
   transition: all linear .3s;
 }
 
-/* 更多新闻按钮悬停效果 */
 .main .news-section_3.container .news-main .more-news:hover {
   transform: scale(1.05);
 }
 
-/* 新闻列表网格布局 */
 .main .news-section_3.container .news-main .news-list {
   display: grid;
   grid-template-columns: repeat(4, minmax(200px, 1fr));
@@ -815,7 +793,6 @@ header .bottom-nav .nav-link.more::after {
   gap: 20px;
 }
 
-/* 新闻项样式 */
 .main .news-section_3.container .news-main .news-list .news-item {
   width: 100%;
   padding: 10px;
@@ -825,7 +802,6 @@ header .bottom-nav .nav-link.more::after {
   transition: all linear .3s;
 }
 
-/* 新闻项图片样式 */
 .main .news-section_3.container .news-main .news-list .news-item img {
   width: 100%;
   height: 70%;
@@ -833,14 +809,12 @@ header .bottom-nav .nav-link.more::after {
   transition: all linear .3s;
 }
 
-/* 新闻项信息样式 */
 .main .news-section_3.container .news-main .news-list .news-item .info {
   font-size: 18px;
   margin: 10px 0;
   line-height: 30px;
 }
 
-/* 更多按钮样式 */
 .main .news-section_3.container .news-main .news-list .news-item .more {
   display: block;
   float: right;
@@ -856,25 +830,21 @@ header .bottom-nav .nav-link.more::after {
   border-radius: 15px;
 }
 
-/* 新闻项悬停效果 */
 .main .news-section_3.container .news-main .news-list .news-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   transition: all .3s ease;
 }
 
-/* 新闻项图片悬停效果 */
 .main .news-section_3.container .news-main .news-list .news-item:hover img {
   transform: scale(1.05);
   transition: transform .3s ease;
 }
 
-/* 更多按钮悬停效果 */
 .main .news-section_3.container .news-main .news-list .news-item:hover .more {
   background-color: #aa220d;
 }
 
-/* 滑入动画 */
 @keyframes slideIn {
   0% {
     transform: translateX(-50%);
@@ -884,7 +854,6 @@ header .bottom-nav .nav-link.more::after {
   }
 }
 
-/* 页脚样式 */
 .footer {
   padding: 40px 0;
   background-color: #fff;
@@ -892,7 +861,6 @@ header .bottom-nav .nav-link.more::after {
   text-align: center;
 }
 
-/* 页脚链接区域样式 */
 .footer .footer-links {
   width: 100%;
   height: max-content;
@@ -903,7 +871,6 @@ header .bottom-nav .nav-link.more::after {
   margin-bottom: 20px;
 }
 
-/* 页脚链接列样式 */
 .footer .footer-links .links-col a {
   display: block;
   margin: 5px 0;

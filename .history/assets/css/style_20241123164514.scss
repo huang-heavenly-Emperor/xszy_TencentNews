@@ -739,7 +739,7 @@ header {
                 width: 100%;
 
                 .info-item {
-                    // width: 450px;
+                    width: 450px;
                     height: 100%;
 
                     video {
@@ -810,8 +810,12 @@ header {
                 cursor: default;
 
             }
+
+            span:nth-child(1) {}
+
             span:nth-child(2) {
                 color: $white;
+
                 background-color: $red;
 
             }

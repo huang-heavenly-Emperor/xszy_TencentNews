@@ -55,7 +55,7 @@ li {
 body {
     font-family: Arial, sans-serif;
     width: 100%;
-    min-width: 1485px;
+    min-width: 320px;
 
     @include respond-to('medium') {
         min-width: 768px;
@@ -341,7 +341,6 @@ header {
             margin-top: 30px;
         }
 
-        // 附加信息
         .little_info {
             text-align: center;
             margin: 30px 0;
@@ -349,7 +348,7 @@ header {
 
         .news-main {
 
-            // 新闻内容区域
+            // 新闻内容
             .news-content {
                 flex: 1;
                 min-width: 0;
@@ -361,7 +360,6 @@ header {
                     gap: 20px;
                 }
 
-                // 新闻条目样式
                 .news-item {
                     padding-bottom: 20px;
                     border-bottom: 1px solid #eee;
@@ -386,7 +384,7 @@ header {
                 }
             }
 
-            // 轮播图区域
+            // 轮播图
             .news-slider {
                 flex: 1;
                 flex-shrink: 0;
@@ -399,7 +397,6 @@ header {
                     border-radius: 4px;
                 }
 
-                // 轮播图项目
                 .slider-item {
                     position: absolute;
                     width: 100%;
@@ -418,7 +415,6 @@ header {
                     }
                 }
 
-                // 轮播图标题
                 .slider-caption {
                     position: absolute;
                     bottom: 0;
@@ -431,7 +427,6 @@ header {
                     text-align: center;
                 }
 
-                // 轮播图控制按钮
                 .slider-controls {
                     position: absolute;
                     top: 50%;
@@ -444,7 +439,6 @@ header {
                     z-index: 1;
                 }
 
-                // 上一个/下一个按钮
                 .prev-btn,
                 .next-btn {
                     background: rgba(0, 0, 0, 0.5);
@@ -456,7 +450,6 @@ header {
                     border-radius: 4px;
                 }
 
-                // 轮播图指示点
                 .slider-dots {
                     position: absolute;
                     bottom: 60px;
@@ -484,7 +477,6 @@ header {
 
     }
 
-    // 第一新闻区块特殊样式
     .news-section_1.container {
         background: linear-gradient(to right, #599c79, #0090bc);
         height: max-content;
@@ -503,7 +495,6 @@ header {
             margin: 0 auto;
             gap: 0;
 
-            // 轮播图区域
             .news-slider {
 
                 height: 100%;
@@ -520,7 +511,6 @@ header {
                 }
             }
 
-            // 新闻内容区域
             .news-content {
 
                 height: 100%;
@@ -561,7 +551,6 @@ header {
         }
     }
 
-    // 第二新闻区块特殊样式
     .news-section_2.container {
 
         height: max-content;
@@ -571,7 +560,6 @@ header {
         overflow: hidden;
         margin-top: 80px;
 
-        // 语言导航
         .language-nav {
             display: flex;
             width: 100%;
@@ -594,7 +582,6 @@ header {
 
             }
 
-            // 语言选项
             .language-item {
                 all: unset;
 
@@ -632,7 +619,6 @@ header {
 
             }
 
-            // 激活状态
             .active {
                 color: $primary-color;
 
@@ -642,14 +628,12 @@ header {
             }
         }
 
-        // 新闻主体区域
         .news-main {
             display: grid;
             grid-template-columns: 1.5fr 1fr 1fr;
             gap: 10px;
             grid-template-rows: 1fr 1fr 1fr;
 
-            // 轮播图区域
             .section_2_slider {
                 grid-column-start: 1;
                 grid-column-end: 3;
@@ -663,7 +647,6 @@ header {
                 }
             }
 
-            // 习近平时间
             .xi-time {
                 grid-column-start: 3;
                 grid-column-end: 4;
@@ -726,7 +709,6 @@ header {
                 width: 100%;
             }
 
-            // 信息列表
             .info-list {
 
                 grid-column-start: 1;
@@ -739,7 +721,7 @@ header {
                 width: 100%;
 
                 .info-item {
-                    // width: 450px;
+                    width: 450px;
                     height: 100%;
 
                     video {
@@ -767,7 +749,6 @@ header {
         }
     }
 
-    // 第三新闻区块特殊样式
     .news-section_3.container {
         height: 1000px;
         width: 100%;
@@ -784,7 +765,6 @@ header {
         background: url(../images/lunbo_7.webp) no-repeat center center;
         background-size: cover;
 
-        // 新闻标题
         .news-title {
             color: $red;
             margin-top: 0;
@@ -793,7 +773,6 @@ header {
 
         }
 
-        // 新闻信息
         .new_info {
             color: $red;
             font-size: 0;
@@ -810,8 +789,12 @@ header {
                 cursor: default;
 
             }
+
+            span:nth-child(1) {}
+
             span:nth-child(2) {
                 color: $white;
+
                 background-color: $red;
 
             }
@@ -823,7 +806,6 @@ header {
             }
         }
 
-        // 新闻主体
         .news-main {
             margin-top: 80px;
             width: 100%;
@@ -835,7 +817,6 @@ header {
             background: rgba($color: #fff, $alpha: .7);
             border-radius: 10px;
 
-            // 更多新闻按钮
             .more-news {
                 all: unset;
 
@@ -852,7 +833,6 @@ header {
                 }
             }
 
-            // 新闻列表
             .news-list {
                 display: grid;
 
@@ -860,7 +840,6 @@ header {
                 grid-template-rows: minmax(100px, 1fr);
                 gap: 20px;
 
-                // 新闻项目
                 .news-item {
                     width: 100%;
                     padding: 10px;
@@ -917,7 +896,6 @@ header {
     }
 }
 
-// 滑入动画
 @keyframes slideIn {
     0% {
         transform: translateX(-50%);
@@ -929,14 +907,13 @@ header {
 }
 
 
-// 页脚样式
+// 页脚
 .footer {
     padding: 40px 0;
     background-color: $white;
     border-top: 1px solid $border-color;
     text-align: center;
 
-    // 页脚链接
     .footer-links {
         width: 100%;
         height: max-content;
@@ -948,7 +925,6 @@ header {
         border-bottom: 3px solid $border-color;
         margin-bottom: 20px;
 
-        // 链接列
         .links-col {
 
 
@@ -971,7 +947,6 @@ header {
     }
 
 
-    // 合作伙伴链接
     .partner-links {
         display: flex;
         justify-content: space-around;
@@ -990,7 +965,6 @@ header {
         }
     }
 
-    // 版权信息
     .copyright {
         color: #5c5c5c;
         font-size: 14px;
@@ -1000,3 +974,66 @@ header {
     }
 }
 
+// 响应式设计
+@media screen and (max-width: 1200px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .right {
+        min-width: 300px;
+        gap: 15px;
+    }
+
+    .bottom-nav .container {
+        gap: 15px;
+    }
+
+    .links-row {
+        gap: 15px;
+    }
+
+    .partner-links {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .right {
+        min-width: 200px;
+        gap: 10px;
+    }
+
+    .bottom-nav .container {
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .news-section.container {
+        flex-direction: column;
+    }
+
+    .news-slider {
+        width: 100%;
+    }
+
+    .news-title {
+        font-size: 20px;
+    }
+
+    .links-row {
+        gap: 10px;
+        justify-content: flex-start;
+    }
+
+    .partner-links {
+        gap: 15px;
+    }
+}

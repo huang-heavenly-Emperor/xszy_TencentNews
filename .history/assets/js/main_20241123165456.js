@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     ];
 
-    // 第一组轮播图数据 - 政治新闻
+    // 第一组轮播图数据
     const slides_1 = [
         {
             image: 'assets/images/lunbo_1.png',
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     ];
 
-    // 第二组轮播图数据 - 国际新闻
+    // 第二组轮播图数据
     const slides_2 = [
         {
             image: 'assets/images/lunbo_5.webp',

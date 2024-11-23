@@ -55,7 +55,7 @@ li {
 body {
     font-family: Arial, sans-serif;
     width: 100%;
-    min-width: 1485px;
+    min-width: 320px;
 
     @include respond-to('medium') {
         min-width: 768px;
@@ -739,7 +739,7 @@ header {
                 width: 100%;
 
                 .info-item {
-                    // width: 450px;
+                    width: 450px;
                     height: 100%;
 
                     video {
@@ -810,8 +810,12 @@ header {
                 cursor: default;
 
             }
+
+            span:nth-child(1) {}
+
             span:nth-child(2) {
                 color: $white;
+
                 background-color: $red;
 
             }
@@ -1000,3 +1004,66 @@ header {
     }
 }
 
+// 响应式布局
+@media screen and (max-width: 1200px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .right {
+        min-width: 300px;
+        gap: 15px;
+    }
+
+    .bottom-nav .container {
+        gap: 15px;
+    }
+
+    .links-row {
+        gap: 15px;
+    }
+
+    .partner-links {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .right {
+        min-width: 200px;
+        gap: 10px;
+    }
+
+    .bottom-nav .container {
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .news-section.container {
+        flex-direction: column;
+    }
+
+    .news-slider {
+        width: 100%;
+    }
+
+    .news-title {
+        font-size: 20px;
+    }
+
+    .links-row {
+        gap: 10px;
+        justify-content: flex-start;
+    }
+
+    .partner-links {
+        gap: 15px;
+    }
+}

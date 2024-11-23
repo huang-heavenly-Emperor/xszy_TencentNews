@@ -1,29 +1,26 @@
-// 轮播图类
 class ImageSlider {
     constructor(options) {
         // 初始化轮播图属性
-        this.slides = options.slides || []; // 轮播图数据数组
-        this.container = options.container; // 轮播图容器
-        this.currentSlide = 0; // 当前显示的幻灯片索引
-        this.interval = null; // 自动播放定时器
-
+        this.slides = options.slides || [];
+        this.container = options.container;
+        this.currentSlide = 0;
+        this.interval = null;
+        
         // 获取DOM元素
-        this.sliderContainer = this.container.querySelector('.slider-container'); // 幻灯片容器
-        this.dotsContainer = this.container.querySelector('.slider-dots'); // 指示点容器
-        this.prevBtn = this.container.querySelector('.prev-btn'); // 上一张按钮
-        this.nextBtn = this.container.querySelector('.next-btn'); // 下一张按钮
-
+        this.sliderContainer = this.container.querySelector('.slider-container');
+        this.dotsContainer = this.container.querySelector('.slider-dots');
+        this.prevBtn = this.container.querySelector('.prev-btn');
+        this.nextBtn = this.container.querySelector('.next-btn');
+        
         // 初始化轮播图
         this.init();
     }
 
-    // 初始化方法
     init() {
         // 创建轮播图和指示点
         this.slides.forEach((slide, index) => {
-            // 创建幻灯片元素
             const slideElement = document.createElement('div');
-            slideElement.className = `slider-item ${index === 0 ? 'active' : ''}`; // 第一张幻灯片默认显示
+            slideElement.className = `slider-item ${index === 0 ? 'active' : ''}`;
             slideElement.innerHTML = `
                 <img src="${slide.image}" alt="幻灯片 ${index + 1}">
                 <div class="slider-caption">${slide.caption}</div>
@@ -32,14 +29,14 @@ class ImageSlider {
 
             // 创建指示点
             const dot = document.createElement('span');
-            dot.className = `dot ${index === 0 ? 'active' : ''}`; // 第一个指示点默认激活
-            dot.addEventListener('click', () => this.goToSlide(index)); // 点击指示点切换幻灯片
+            dot.className = `dot ${index === 0 ? 'active' : ''}`;
+            dot.addEventListener('click', () => this.goToSlide(index));
             this.dotsContainer.appendChild(dot);
         });
 
         // 添加按钮事件监听
-        this.prevBtn.addEventListener('click', () => this.prevSlide()); // 上一张按钮点击事件
-        this.nextBtn.addEventListener('click', () => this.nextSlide()); // 下一张按钮点击事件
+        this.prevBtn.addEventListener('click', () => this.prevSlide());
+        this.nextBtn.addEventListener('click', () => this.nextSlide());
 
         // 开始自动播放
         this.startAutoPlay();
@@ -74,7 +71,7 @@ class ImageSlider {
 
     // 开始自动播放
     startAutoPlay() {
-        this.interval = setInterval(() => this.nextSlide(), 5000); // 每5秒自动切换一次
+        this.interval = setInterval(() => this.nextSlide(), 5000);
     }
 
     // 停止自动播放
@@ -87,8 +84,8 @@ class ImageSlider {
 }
 
 // 页面加载完成后初始化轮播图
-document.addEventListener('DOMContentLoaded', function () {
-    // 示例轮播图数据配置
+document.addEventListener('DOMContentLoaded', function() {
+    // 轮播图数据配置
     const slides = [
         {
             image: 'https://via.placeholder.com/400x300/ff6b6b/ffffff',
@@ -104,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     ];
 
-    // 第一组轮播图数据 - 政治新闻
+    // 第一组轮播图数据
     const slides_1 = [
         {
             image: 'assets/images/lunbo_1.png',
@@ -120,12 +117,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     ];
 
-    // 第二组轮播图数据 - 国际新闻
+    // 第二组轮播图数据
     const slides_2 = [
         {
             image: 'assets/images/lunbo_5.webp',
-            caption: ` Moments in Motion | President Xi at G20
-    Rio Summit`
+            caption: '习近平主席出席G20峰会精彩时刻'
         },
         {
             image: 'assets/images/lunbo_6.png',
