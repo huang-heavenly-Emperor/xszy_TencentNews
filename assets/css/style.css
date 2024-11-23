@@ -404,7 +404,7 @@ header .bottom-nav .nav-link.more::after {
 .main .news-section_1.container {
   background: linear-gradient(to right, #599c79, #0090bc);
   height: max-content;
-  padding: 20px 0;
+  padding: 100px 20px 250px;
   margin-top: 0;
 }
 
@@ -414,8 +414,7 @@ header .bottom-nav .nav-link.more::after {
   grid-template-columns: 1fr 1fr;
   border: 8px solid #ffffff;
   padding: 0;
-  margin: 0;
-  width: 1400px;
+  width: 100%;
   margin: 0 auto;
   gap: 0;
 }
@@ -463,7 +462,7 @@ header .bottom-nav .nav-link.more::after {
   width: 0;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
-  transition: width .8s linear;
+  transition: width .3s linear;
 }
 
 .main .news-section_1.container .news-main .news-content .item:hover::before {
@@ -656,6 +655,8 @@ header .bottom-nav .nav-link.more::after {
   flex-direction: column;
   margin: 0;
   padding-top: 40px;
+  padding: 40px 20px;
+  box-sizing: border-box;
   overflow: hidden;
   align-items: center;
   min-width: 1200px;
@@ -698,11 +699,14 @@ header .bottom-nav .nav-link.more::after {
 
 .main .news-section_3.container .news-main {
   margin-top: 80px;
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 00px;
+  gap: 10px;
+  padding: 20px 10px 80px;
+  box-sizing: border-box;
   background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
 }
 
 .main .news-section_3.container .news-main .more-news {
@@ -731,7 +735,7 @@ header .bottom-nav .nav-link.more::after {
   width: 100%;
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-  margin: 20px;
+  border-radius: 10px;
   box-sizing: border-box;
   transition: all linear .3s;
 }
