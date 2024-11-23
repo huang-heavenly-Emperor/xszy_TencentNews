@@ -51,6 +51,10 @@ body {
     font-family: Arial, sans-serif;
     width: 100%;
     // min-width: 1485px;
+
+    @include respond-to('medium') {
+        min-width: 768px;
+    }
 }
 
 header {
@@ -289,10 +293,6 @@ header {
     background-color: #f5f5f5;
     width: 100%;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
 
     // 新闻区块通用样式
     .news-section.container .news-main {
@@ -302,16 +302,15 @@ header {
         background-color: $white;
         padding: 20px;
         border-radius: 4px;
-        width: 100%;
+        width: 80%;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
 
     // 新闻区块基础样式
-    .news-section.container {
-        margin: 30px 0;
+    .news-section {
+        margin: 0px 0;
         background-color: #fff;
         overflow: hidden;
-        padding: 100px;
 
         // 新闻标题
         .news-title {
@@ -331,8 +330,6 @@ header {
         }
 
         .news-main {
-            width: 100%;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
             // 新闻内容区域
             .news-content {
@@ -475,7 +472,7 @@ header {
         height: max-content;
         padding: 100px 20px 250px;
         margin-top: 0;
-        width: 100%;
+        width: 80%;
 
         .news-main {
             background: linear-gradient(to right, #599c79, #0090bc);
@@ -484,7 +481,7 @@ header {
 
             border: 8px solid #ffffff;
             padding: 0;
-            width: 80%;
+            width: 100%;
             margin: 0 auto;
             gap: 0;
 
@@ -548,7 +545,7 @@ header {
 
     // 第二新闻区块特殊样式
     .news-section_2.container {
-        width: 100%;
+        width: 80%;
         height: max-content;
         background-color: #fff;
         padding: 20px;
@@ -559,8 +556,7 @@ header {
         // 语言导航
         .language-nav {
             display: flex;
-            width: 90%;
-            margin: 0 auto;
+            width: 100%;
             justify-content: space-around;
             align-items: center;
             height: 30px;
@@ -630,7 +626,6 @@ header {
 
         // 新闻主体区域
         .news-main {
-            width: 90%;
             display: grid;
             grid-template-columns: 1.5fr 1fr 1fr;
             gap: 10px;
@@ -757,7 +752,7 @@ header {
     // 第三新闻区块特殊样式
     .news-section_3.container {
         height: 1000px;
-        width: 100%;
+        width: 90%;
         display: flex;
         flex-direction: column;
         margin: 0;
@@ -813,7 +808,7 @@ header {
         // 新闻主体
         .news-main {
             margin-top: 80px;
-            width: 80%;
+            width: 100%;
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -962,7 +957,7 @@ header {
 
     // 页脚链接
     .footer-links {
-        width: 90%;
+        width: 100%;
         height: max-content;
 
         display: flex;

@@ -548,7 +548,7 @@ header {
 
     // 第二新闻区块特殊样式
     .news-section_2.container {
-        width: 100%;
+        width: 80%;
         height: max-content;
         background-color: #fff;
         padding: 20px;
@@ -559,8 +559,7 @@ header {
         // 语言导航
         .language-nav {
             display: flex;
-            width: 90%;
-            margin: 0 auto;
+            width: 100%;
             justify-content: space-around;
             align-items: center;
             height: 30px;
@@ -630,7 +629,7 @@ header {
 
         // 新闻主体区域
         .news-main {
-            width: 90%;
+            width: 100%;
             display: grid;
             grid-template-columns: 1.5fr 1fr 1fr;
             gap: 10px;

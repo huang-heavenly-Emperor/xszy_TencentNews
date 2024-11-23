@@ -307,11 +307,10 @@ header {
     }
 
     // 新闻区块基础样式
-    .news-section.container {
+    .news-section {
         margin: 30px 0;
         background-color: #fff;
         overflow: hidden;
-        padding: 100px;
 
         // 新闻标题
         .news-title {
@@ -331,8 +330,6 @@ header {
         }
 
         .news-main {
-            width: 100%;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
             // 新闻内容区域
             .news-content {
@@ -484,7 +481,7 @@ header {
 
             border: 8px solid #ffffff;
             padding: 0;
-            width: 80%;
+            width: 100%;
             margin: 0 auto;
             gap: 0;
 
@@ -559,8 +556,7 @@ header {
         // 语言导航
         .language-nav {
             display: flex;
-            width: 90%;
-            margin: 0 auto;
+            width: 100%;
             justify-content: space-around;
             align-items: center;
             height: 30px;
@@ -630,7 +626,7 @@ header {
 
         // 新闻主体区域
         .news-main {
-            width: 90%;
+    
             display: grid;
             grid-template-columns: 1.5fr 1fr 1fr;
             gap: 10px;

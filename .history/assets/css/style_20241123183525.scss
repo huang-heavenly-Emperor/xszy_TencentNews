@@ -33,6 +33,14 @@ $breakpoints: (
     padding: 0 40px;
 }
 
+// 响应式混合器 - 根据屏幕尺寸调整样式
+@mixin respond-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}
 
 // 基础样式重置
 * {
@@ -51,6 +59,21 @@ body {
     font-family: Arial, sans-serif;
     width: 100%;
     // min-width: 1485px;
+
+    @include respond-to('medium') {
+        min-width: 768px;
+    }
+}
+
+// 主要布局区域最小宽度设置
+header,
+main,
+footer {
+    min-width: 320px;
+
+    @include respond-to('medium') {
+        min-width: 768px;
+    }
 }
 
 header {
@@ -98,7 +121,6 @@ header {
             .center {
                 flex: 1.5;
                 max-width: 600px;
-                min-width: 150px;
                 margin: 0 40px;
                 height: 44px;
 
@@ -167,7 +189,7 @@ header {
                 gap: 20px;
 
 
-                justify-content: space-between;
+                justify-content: flex-end;
 
                 // 导航项目
                 .action-item {
@@ -288,11 +310,6 @@ header {
 
     background-color: #f5f5f5;
     width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
 
     // 新闻区块通用样式
     .news-section.container .news-main {
@@ -302,16 +319,14 @@ header {
         background-color: $white;
         padding: 20px;
         border-radius: 4px;
-        width: 100%;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
 
     // 新闻区块基础样式
-    .news-section.container {
+    .news-section {
         margin: 30px 0;
         background-color: #fff;
         overflow: hidden;
-        padding: 100px;
 
         // 新闻标题
         .news-title {
@@ -331,8 +346,6 @@ header {
         }
 
         .news-main {
-            width: 100%;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
             // 新闻内容区域
             .news-content {
@@ -475,7 +488,7 @@ header {
         height: max-content;
         padding: 100px 20px 250px;
         margin-top: 0;
-        width: 100%;
+
 
         .news-main {
             background: linear-gradient(to right, #599c79, #0090bc);
@@ -484,7 +497,7 @@ header {
 
             border: 8px solid #ffffff;
             padding: 0;
-            width: 80%;
+            width: 100%;
             margin: 0 auto;
             gap: 0;
 
@@ -548,7 +561,7 @@ header {
 
     // 第二新闻区块特殊样式
     .news-section_2.container {
-        width: 100%;
+
         height: max-content;
         background-color: #fff;
         padding: 20px;
@@ -559,8 +572,7 @@ header {
         // 语言导航
         .language-nav {
             display: flex;
-            width: 90%;
-            margin: 0 auto;
+            width: 100%;
             justify-content: space-around;
             align-items: center;
             height: 30px;
@@ -630,7 +642,6 @@ header {
 
         // 新闻主体区域
         .news-main {
-            width: 90%;
             display: grid;
             grid-template-columns: 1.5fr 1fr 1fr;
             gap: 10px;
@@ -758,6 +769,7 @@ header {
     .news-section_3.container {
         height: 1000px;
         width: 100%;
+
         display: flex;
         flex-direction: column;
         margin: 0;
@@ -813,7 +825,7 @@ header {
         // 新闻主体
         .news-main {
             margin-top: 80px;
-            width: 80%;
+            width: 100%;
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -920,29 +932,20 @@ header {
         .top-nav {
 
             .container {
-                .left {
-                    .logo {
-                        height: 30px;
-                    }
-                }
-
+                .
                 .center {
                     .search-box {
                         .search-btn {
                             &::before {
                                 display: none;
-
+                    
                             }
                         }
                     }
                 }
 
                 .right {
-                    gap: 5px;
-
                     .action-item {
-
-
                         img {
                             display: none;
                         }
@@ -962,7 +965,7 @@ header {
 
     // 页脚链接
     .footer-links {
-        width: 90%;
+        width: 100%;
         height: max-content;
 
         display: flex;
